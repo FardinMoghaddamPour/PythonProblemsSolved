@@ -4,7 +4,7 @@ import timeit
 dice = random.SystemRandom()
 
 
-def single_test(input_number: int, witness):
+def single_test(input_number: int, witness: int) -> bool:
     exponent = input_number - 1
     while not exponent & 1:
         exponent >>= 1
