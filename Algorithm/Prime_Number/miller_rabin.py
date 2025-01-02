@@ -24,7 +24,7 @@ def single_test(input_number: int, witness: int) -> bool:
 def miller_rabin_prime_number_check(input_number: int, iteration: int = 40) -> (bool | str):
     if not isinstance(input_number, int):
         return "Type Error you must enter an integer."
-    if input_number < 2 or input_number % 2 == 0:
+    if input_number < 2 or (input_number % 2 == 0 and input_number != 2):
         return False
     if input_number in (2, 3):
         return True
